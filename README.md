@@ -40,8 +40,9 @@ exec zsh # load key in environment
 lion watch start
 
 # install kilo
-curl -fsSL https://kilo.ai/cli/install | bash
-#-LION: addr.title KiloCode CLI as default harness
-#.LION: adr.decision Good harness with many functions, including the use of special providers via open router (offers, fastest, cheapest)
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+#-LION: addr.title Hermes as default harness
+#.LION: adr.decision Good harness with many functions, including the heartbeat mechanic
 lion watch stop
 ```
+
