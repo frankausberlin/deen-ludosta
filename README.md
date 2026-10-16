@@ -25,18 +25,23 @@ The top layer is entirely domain-specific. Currently, it houses the **Luxurious 
 1. **Install Lion**
 > * Carry out the three installation steps described in chapter [Quickstart](https://github.com/frankausberlin/lion#quickstart) in the Lion README.md.
 
-2. **Install Hermes**
+2. **Set Open Router Key**
+```shell
+# write your open router key in exports
+echo "yourkey" > ~/.shlib/exports/OPENROUTER_API_KEY
+chmod 600 ~/.shlib/exports/OPENROUTER_API_KEY
+exec zsh # load key in environment
+```
+
+3. **Install Hermes**
 > * We use the shlib watch to install hermes with some additional infos for lion.
 ```shell
 # activate watch mode
 lion watch start
 
-# write your open router key in exports
-echo "yourkey" > ~/.shlib/exports/OPENROUTER_API_KEY
-chmod 600 ~/.shlib/exports/OPENROUTER_API_KEY
-exec zsh # load key in environment
-
-#.LION: addr.title KiloCode CLI as default harness
-#.LION: adr.decision Good harness with many functions, including the use of special providers via open router (offers, fastest, cheapest)
+# install kilo
 curl -fsSL https://kilo.ai/cli/install | bash
+#-LION: addr.title KiloCode CLI as default harness
+#.LION: adr.decision Good harness with many functions, including the use of special providers via open router (offers, fastest, cheapest)
+lion watch stop
 ```
