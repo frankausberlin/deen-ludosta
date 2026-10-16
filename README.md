@@ -25,7 +25,13 @@ The top layer is entirely domain-specific. Currently, it houses the **Luxurious 
 1. **Install Lion**
 > * Carry out the three installation steps described in chapter [Quickstart](https://github.com/frankausberlin/lion#quickstart) in the Lion README.md.
 
-2. **Set Open Router Key**
+2. **Clone Deen Ludosta**
+```shell
+git clone https://github.com/frankausberlin/deen-ludosta ~/gits/deen-ludosta
+```
+
+
+3. **Set Open Router Key**
 ```shell
 # write your open router key in exports
 echo "yourkey" > ~/.shlib/exports/OPENROUTER_API_KEY
@@ -33,16 +39,16 @@ chmod 600 ~/.shlib/exports/OPENROUTER_API_KEY
 exec zsh # load key in environment
 ```
 
-3. **Install Hermes**
+4. **Install Hermes**
 > * We use the shlib watch to install hermes with some additional infos for lion.
 ```shell
 # activate watch mode
 lion watch start
 
-# install kilo
-curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
-#-LION: addr.title Hermes as default harness
+#.LION: addr.title Hermes as default harness
 #.LION: adr.decision Good harness with many functions, including the heartbeat mechanic
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+ln -s /home/frank/.hermes/skills/devops
 lion watch stop
 ```
 
